@@ -41,12 +41,12 @@ module PryClipboard
       BANNER
 
       def options(opt)
-        opt.on :l, "Copy history with last result", :optional => true
-        opt.on :H, :head, "Copy the first N items.", :optional => true, :as => Integer
-        opt.on :T, :tail, "Copy the last N items.", :optional => true, :as => Integer
-        opt.on :R, :range, "Copy the given range of lines.", :optional => true, :as => Range
-        opt.on :G, :grep, "Copy lines matching the given pattern.", :optional => true, :as => String
-        opt.on :q, :quiet, "quiet output", :optional => true
+        opt.on :l, "Copy history with last result", :optional_argument => true
+        opt.on :H, :head, "Copy the first N items.", :optional_argument => true, :as => Integer
+        opt.on :T, :tail, "Copy the last N items.", :optional_argument => true, :as => Integer
+        opt.on :R, :range, "Copy the given range of lines.", :optional_argument => true, :as => Range
+        opt.on :G, :grep, "Copy lines matching the given pattern.", :optional_argument => true, :as => String
+        opt.on :q, :quiet, "quiet output", :optional_argument => true
       end
 
       def process
